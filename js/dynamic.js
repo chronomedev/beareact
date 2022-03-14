@@ -1,16 +1,15 @@
 
 function showLogIn(){
-    document.getElementById("logInPopUp").style.opacity = 1;
-    document.getElementById("logInPopUp").style.display = "inline-block";
-
+    $("#logInPopUp").show();
 }
 
 
 function hideLogIn(){
-    document.getElementById("logInPopUp").style.display = "none";
+    $("#logInPopUp").hide();
+    //document.getElementById("logInPopUp").style.display = "none";
 }
 
 
 window.onload = ()=>{
-    document.getElementById("logInPopUp").style.display = "none";
+    $("#logInPopUp").hide();
 }
