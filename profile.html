@@ -45,6 +45,56 @@
 	<link rel="stylesheet" type="text/css" href="./Login V17_files/util.css">
 	<link rel="stylesheet" type="text/css" href="./Login V17_files/main.css">
 
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  
+	<script type="text/javascript" src="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"></script>
+
+
+	<style>
+		/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+	</style>
+
+
+
+
+<!-- 
+	 tab  -->
+
 
 	<!-- / -->
 
@@ -632,9 +682,10 @@
 
 					<div class="row justify-content-between align-items-center">
 						<div class="col-auto mb-4">
-							<h3 class="fw-medium h1">All <span data-animate="svg-underline-animated"
-									class="svg-underline nocolor"><span>Products</span></span></h3>
+							<h3 class="fw-medium h1">Profile </h3>
+
 						</div>
+						<hr/>
 
 
 					</div>
@@ -650,356 +701,81 @@
 					<div id="shop" class="shop row gutter-30 col-mb-30 mt-3">
 
 						<div class="row">
-							<div class="col-md-3">
-								<div class="dropdown sortbuttons">
-									<button
-										class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color dropdown-toggle"
-										type="button" id="catButton" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="true">Kategori Produk</button>
+							<div class="col-md-5">
+								<div class="row">
+									<div class="col">
+										<p>NAMA</p>
+									</div>
+									<div class="col">
 
-										<hr/>
-									<div class="" aria-labelledby="catButton">
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Meja</label>
-	
-										</div>
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Kursi</label>
-	
-										</div>
-
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Ruang Tidur</label>
-	
-										</div>
-
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Rak dan Penyimpanan</label>
-	
-										</div>
-
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Office</label>
-										</div>
-
-										<div class="dropdown-item">
-											<input id="eh" type="checkbox" class="form-check-input" />
-											<label class="form-check-label" for="eh">Aksesoris</label>
-										</div>
-
+										<input type="text" placeholder="..." name="namaInput" style="border-style:inset;"/>
 									</div>
 								</div>
-								<hr/>
-	
-								<div class="dropdown sortbuttons">
-									<button
-										class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color dropdown-toggle"
-										type="button" id="sortButton" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="true">Sub Category</button>
-										<div class="" aria-labelledby="catButton">
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">ALL</label>
-		
-											</div>
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Cofee Table</label>
-		
-											</div>
-	
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Dining Table</label>
-		
-											</div>
-	
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">End Table</label>
-		
-											</div>
-	
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">PUB Table</label>
-											</div>
-	
-	
-										</div>
-								</div>
-								<hr/>
+								<div class="row">
+									<div class="col">
+										<p>ALAMAT EMAIL</p>
+									</div>
+									<div class="col">
 
-								<div class="dropdown sortbuttons">
-									<button
-										class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color dropdown-toggle"
-										type="button" id="sortButton" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="true">Sort By</button>
-										<div class="" aria-labelledby="catButton">
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Harga Terendah-Tertinggi</label>
-		
-											</div>
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Harga Tertinggi-Terendah</label>
-		
-											</div>
-	
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Terlaris</label>
-		
-											</div>
-	
-											<div class="dropdown-item">
-												<input id="eh" type="checkbox" class="form-check-input" />
-												<label class="form-check-label" for="eh">Popularitas</label>
-		
-											</div>
-	
-										</div>
+										<input type="email" placeholder="..." name="email" style="border-style:inset;"/>
+									</div>
 								</div>
-								<hr/>
-	
+
+
+
+							</div>
+
 							</div>
 	
 							<div class="col">
 								<div class="row">
 
-								<!-- Product 1 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/2.jpg" alt="Light Grey Sofa"></a>
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/2-1.jpg" alt="Light Grey Sofa"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Light Grey Sofa</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$799.99</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 2 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/3.jpg" alt="Celling Lights"></a>
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/3-1.jpg" alt="Celling Lights"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Celling Lights</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$39.49</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 3 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/4-1.jpg" alt="High Stand Chair"></a>
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/4.jpg" alt="High Stand Chair"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium" href="demo-furniture-single.html">High
-														Stand Chair</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$24.99</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 4 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/5.jpg"
-													alt="Dining Sofa with Tea-table"></a>
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/5-1.jpg"
-													alt="Dining Sofa with Tea-table"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Dining Sofa with Tea-table</a>
-												</h4>
-											</div>
-											<h5 class="product-price fw-normal">$99.99</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 5 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/6.jpg"
-													alt="Bathroom Cloths Shelves"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Bathroom Cloths Shelves</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$23</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 6 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/7.jpg" alt="Golden Lamp for Room"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Golden Lamp for Room</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$12.99</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 7 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/8.jpg"
-													alt="White Cuddle Chair with Cusions"></a><a
-												href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/8-1.jpg"
-													alt="White Cuddle Chair with Cusions"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">White Cuddle Chair with
-														Cusions</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$29.99</h5>
-										</div>
-									</div>
-								</div>
-	
-								<!-- Product 8 -->
-								<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-									<div class="grid-inner">
-										<div class="product-image">
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/9.jpg" alt="Golden Lamp for Room"></a>
-											<a href="demo-furniture-single.html"><img
-													src="demos/furniture/images/shop/9-1.jpg"
-													alt="Golden Lamp for Room"></a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content align-items-end justify-content-between"
-													data-hover-animate="fadeIn" data-hover-speed="400">
-													<a href="#" class="btn btn-light me-2"><i
-															class="icon-line-shopping-cart"></i></a>
-													<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light"
-														data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="product-desc">
-											<div class="product-title mb-0">
-												<h4 class="mb-0"><a class="fw-medium"
-														href="demo-furniture-single.html">Golden Lamp for Room</a></h4>
-											</div>
-											<h5 class="product-price fw-normal">$12.99</h5>
-										</div>
-									</div>
-								</div>
+									<div class="tab">
+										<button id="tab1" class="tablinks active" onclick="changeTab(event, 'pemesanan')">Pemesanan</button>
+										<button class="tablinks" onclick="changeTab(event, 'transaction')">Riwayat Transaksi</button>
+										<button class="tablinks" onclick="changeTab(event, 'Tokyo')">Ulasan</button>
+									  </div>
+									  
+									  <!-- Tab content -->
+									  <div id="pemesanan" class="tabcontent">
+										<h3>Pemesanan</h3>
+
+
+
+										<table id="table_id" class="display">
+											<thead>
+												<tr>
+													<th>Column 1</th>
+													<th>Column 2</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Row 1 Data 1</td>
+													<td>Row 1 Data 2</td>
+												</tr>
+												<tr>
+													<td>Row 2 Data 1</td>
+													<td>Row 2 Data 2</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<p>Tempat pemesanan disini</p>
+									  </div>
+									  
+									  <div id="transaction" class="tabcontent">
+										<h3>Riwayat Transaksi</h3>
+										<p>riwayat transaksi disini</p>
+									  </div>
+									  
+									  <div id="Tokyo" class="tabcontent">
+										<h3>Ulasan</h3>
+										<p>Disini Ulasan.</p>
+									  </div>
+
+
+
 								</div>
 
 							</div>
@@ -1012,15 +788,6 @@
 					</div><!-- #shop end -->
 
 					<div class="clear"></div>
-
-					<nav aria-label="Page navigation">
-						<ul class="pagination justify-content-center mt-4">
-							<li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a></li>
-						</ul>
-					</nav>
 
 				</div>
 
@@ -1191,6 +958,7 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
+
 
 	<!-- Footer Scripts
 	============================================= -->
