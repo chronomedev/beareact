@@ -32,6 +32,12 @@
 	<link rel="stylesheet" href="demos/furniture/css/fonts.css" type="text/css" /> <!-- Furniture Custom Fonts -->
 	<!-- / -->
 
+	<!-- Slick Slider -->
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 	<!-- Document Title
 	============================================= -->
 	<title>BearAct Wood & Steel </title>
@@ -447,12 +453,12 @@
 						<nav class="primary-menu mx-auto with-arrows order-lg-2 order-last px-0">
 
 							<ul class="menu-container">
-								<li class="menu-item current">
-									<a class="menu-link" href="#">
+								<li class="menu-item">
+									<a class="menu-link" href="index.html">
 										<div>Home</div>
 									</a>
 								</li>
-								<li class="menu-item">
+								<li class="menu-item current">
 									<a class="menu-link" href="shop.html">
 										<div>Shop</div>
 									</a>
@@ -483,12 +489,17 @@
 									</a>
 								</li>
 								<li class="menu-item">
+									<a class="menu-link" href="konsultasi-interior.html">
+										<div>Konsultasi Interior</div>
+									</a>
+								</li>
+								<li class="menu-item">
 									<a class="menu-link" href="about.html">
 										<div>About</div>
 									</a>
 								</li>
 								<li class="menu-item">
-									<a class="menu-link" href=contact.html">
+									<a class="menu-link" href="contact.html">
 										<div>Contact</div>
 									</a>
 								</li>
@@ -535,6 +546,12 @@
 				background-color: black;
 			}
 		</style>
+
+		<!-- <div class="autoplay">
+			<div><img src="img/main-banner.jpg" alt="main-banner"></div>
+			<div><img src="img/main-banner.jpg" alt="main-banner"></div>
+			<div><img src="img/main-banner.jpg" alt="main-banner"></div>
+		</div> -->
 
 		<!-- Slider -->
 		<section class="main-banner" style="background-color: #f2f2f2;">
@@ -817,7 +834,7 @@
 
 						<!-- Image -->
 						<div class="col-xl-4 col-lg-4">
-							<img class="d-block" src="img/your-needs-2.png" alt="" style="width:100%" height="auto">
+							<img class="d-block" src="img/your-needs-1.jpg" alt="" style="width:100%" height="auto">
 						</div>
 
 					</div>
@@ -1135,10 +1152,20 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
+
+	<script>
+		$('.autoplay').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 2000,
+		});
+	</script>
 
 </body>
 
