@@ -30,6 +30,7 @@
 	<!-- Furniture Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="demos/furniture/furniture.css" type="text/css" /> <!-- Furniture Custom Css -->
 	<link rel="stylesheet" href="demos/furniture/css/fonts.css" type="text/css" /> <!-- Furniture Custom Fonts -->
+	<link rel="stylesheet" href="css/prototipe.css"/>
 	<!-- / -->
 
 	<!-- Document Title
@@ -546,12 +547,16 @@
 											<div class="col-md-12">
 												<div class="cart align-items-center" method="post">
 													<div class="row">
-														<div class="col">
-															Apa yang anda mau buat
+														<div class="col padding">
+															<h4>APA YANG ANDA MAU BUAT</h4>
 														<select class="form-select">
 															<option>Meja</option>
 															<option>Kursi</option>
 															<option>Lemari</option>
+														</select>
+
+														<select class="form-select">
+															<option>Meja Belajar</option>
 														</select>
 													</div>
 													
@@ -560,8 +565,8 @@
 
 												<div class="cart align-items-center" method="post">
 													<div class="row">
-														<div class="col">
-															MODEL
+														<div class="col padding">
+															<h4>MODEL</h4>
 														<select class="form-select">
 															<option>Meja Belajar</option>
 															<option>Meja Kerja</option>
@@ -573,43 +578,18 @@
 												</div>
 												<div class="cart align-items-center" method="post">
 													<div class="row">
-														<div class="col">
-															DIMENSI (P x L x T)*
+														<div class="col padding">
+															<h4>DIMENSI (P x L x T)*</h4>
 															<input type="text" class="form-control" placeholder="Ketik dimensi Cth: 45 x 45 x 120 cm.......">
 													</div>
 													
 													</div>
 												</div>
 
-
-
-
-
-												
 												<div class="cart align-items-center" method="post">
 													<div class="row">
-														<div class="col">
-															DEKSRIPSI
-														<textarea placeholder="Ketik Deskripsi  (Misal: saya ingin pakai kayu pinus, model dan desain pakai desain saya sendiri dengan jumlah 6 unit) ............." class="form-control" rows="5"></textarea>
-													</div>
-													
-													</div>
-												</div>
-
-												
-												<div class="cart align-items-center" method="post">
-													<div class="row">
-														<div class="col">
-															Saya SUDAH PUNYA DESAIN SENDIRI, (OPTIONAL)
-														<textarea placeholder="Ketik Deskripsi  (Misal: saya ingin pakai kayu pinus, model dan desain pakai desain saya sendiri dengan jumlah 6 unit) ............." class="form-control" rows="5"></textarea>
-													</div>
-													
-													</div>
-												</div>
-												<div class="cart align-items-center" method="post">
-													<div class="row">
-														<div class="col">
-															FINISHING
+														<div class="col padding">
+															<h4>FINISHING</h4>
 														<select class="form-select">
 															<option>DOFF</option>
 															<option>PERNIS</option>
@@ -620,7 +600,32 @@
 													</div>
 												</div>
 
+
+
+												
 												<div class="cart align-items-center" method="post">
+													<div class="row">
+														<div class="col padding">
+															<h4>DEKSRIPSI</h4>
+														<textarea placeholder="Ketik Deskripsi  (Misal: saya ingin pakai kayu pinus, model dan desain pakai desain saya sendiri dengan jumlah 6 unit) ............." class="form-control" rows="5"></textarea>
+													</div>
+													
+													</div>
+												</div>
+
+												
+												<div class="cart align-items-center" method="post">
+													<div class="row">
+														<div class="col padding">
+															<h4>Saya SUDAH PUNYA DESAIN SENDIRI, (OPTIONAL)</h4>
+															<p>Jika Anda sudah Punya Desain sendiri, kirim desain/gambar pada link dibawah.</p>
+													</div>
+													
+													</div>
+												</div>
+
+
+												<!-- <div class="cart align-items-center" method="post">
 		
 													<row>
 														<col>
@@ -632,27 +637,9 @@
 														</select>
 														</col>
 													</row>
-												</div>
+												</div> -->
 		
-												<form class="cart align-items-center" method="post"
-													enctype='multipart/form-data'>
-													<div class="quantity position-relative mb-3 clearfix">
-		
-		
-														<row>
-															<col>
-															Finishing
-															</col>
-															<col class="col">
-															<select class="form-select">
-																<option>Glossy</option>
-															</select>
-															</col>
-														</row>
-														
-		
-		
-													</div>
+
 
 
 													<!-- <select>
@@ -699,55 +686,48 @@
 
 						<div class="row">
 							<div class="col-md-6">
-								<div class="cart mb-0 d-flex align-items-center" method="post">
-									<button type="button" class="btn btn-dark" style="width:100%">Pesan Sekarang</button>
-									<div class="row">
-										<div class="col">
-											
-										</div>
-									</div>
+								<p>Apa yang anda mau buat</p>
+								<select class="form-select">
+									<option>MJB-001</option>
+									<option>MJB-002</option>
+								</select>
+							</div>
+
+							<div class="col-md-6">
+
+								<p>TEXTURE / BAHAN</p>
+								<div class="row">
+									<div class="col"><button type="button" class="btn btn-dark" style="width:100%">Mahoni</button></div>
+									<div class="col"><button type="button" class="btn btn-dark" style="width:100%">Jati Belanda</button></div>
+								</div>
+								<div class="row">
+									<div class="col"><button type="button" class="btn btn-dark" style="width:100%">Jati</button></div>
+									<div class="col"><button type="button" class="btn btn-dark" style="width:100%">Mangga</button></div>
 								</div>
 
-
 							</div>
+
+							<div class="col-md-6"></div>
 
 						</div>
 						<div class="row">
-							<div class="col-md-6">
+							<center>
+								<h2>SIMILAR PRODUCT</h2>
+							</center>
+							<div class="col">
 								<div class="row">
 
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
 											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
 												alt="Image 1"></a>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
 											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
 												alt="Image 1"></a>
 									</div>
-									<div class="col-md-3">
-										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
-											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
-												alt="Image 1"></a>
-									</div>
-									<div class="col-md-3">
-										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
-											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
-												alt="Image 1"></a>
-									</div>
-									<div class="col-md-3">
-										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
-											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
-												alt="Image 1"></a>
-									</div>
-
-									<div class="col-md-3">
-										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
-											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
-												alt="Image 1"></a>
-									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<a href="demos/furniture/images/ajax/1.jpg" data-lightbox="gallery-item"
 											class="col-sm-12 col-6"><img src="demos/furniture/images/ajax/1.jpg"
 												alt="Image 1"></a>
@@ -760,6 +740,7 @@
 								</div>
 
 							</div>
+							
 
 
 						</div>
