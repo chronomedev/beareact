@@ -22,3 +22,9 @@
     margin-right: 15px;
       
 }
+
+
+.btn.btn-white{
+    border-color:#b2beb5;
+    text-align: left;
+}

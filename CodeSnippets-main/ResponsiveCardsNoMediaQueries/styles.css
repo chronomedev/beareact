@@ -1,0 +1,53 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #16102f;
+    color: #fff;
+    padding-top: 200px;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ======================== */
+/* Cards grid container. */
+.cards{
+    display: grid; /*Turns the cards container into a grid so that we can utilize grid properties.*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*This is where the magic happens*/ 
+    /*
+        The repeat() determines the number of times to repeat the value.
+        The auto-fit keyword will wrap our columns into rows when there’s not enough space in our viewport to fit the minimum value without overflowing the content.
+        The minmax() allows us to set a minimum value that the grid items (the card) should be. I used 200px for the demo as the min, but can be less or more based on your needs. Then we sex the max to be 1 fraction so that the cards take up whatever available space there is.
+    */
+    gap: 20px; /*Short-hand property for row-gap and column-gap. This will basically apply even space to create separation between the cards.*/
+}
+
+/*
+    None of the following is important for the responsive effect. This is where you will have your own custom card styles.
+    One thing to note is that you should not set a fixed height, let the content of the card be it's height. Always set a min-height
+    instead, or no height at all if you have a lot of content inside your card.
+*/
+.card{
+    position: relative;
+    height: 350px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .25);
+    background-color: #151515;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    inset: 0;
+    opacity: .8;
+}

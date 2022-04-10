@@ -31,7 +31,8 @@
 	<link rel="stylesheet" href="demos/furniture/furniture.css" type="text/css" /> <!-- Furniture Custom Css -->
 	<link rel="stylesheet" href="demos/furniture/css/fonts.css" type="text/css" /> <!-- Furniture Custom Fonts -->
 
-
+	<link rel="stylesheet" type="text/css" href="./Login V17_files/util.css">
+	<link rel="stylesheet" type="text/css" href="./Login V17_files/main.css">
 
 
 
@@ -47,17 +48,17 @@
 <body class="stretched">
 
 	<div id="logInPopUp">
-		<div class="container-login100" style="position:fixed;z-index: 8; background-color: grey; opacity: 0.8;">
+		<div class="container-login100" style="position:fixed;z-index: 8; background-color: grey; opacity: 0.8;" onClick="hideLogIn();">
 		</div>
 		<div class="container-login100" style="position:fixed;z-index: 8; background:none;">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" onSubmit="return false;">
 					<div class="row">
 
-						<div class="col"></div>
+						<div class="col" style="align-content: flex-end;"><button onClick="hideLogIn();" class="login100-form-btn">x</button></div>
 						<div class="col"></div>
 						<div class="col-md-9">
-							<button onClick="hideLogIn();" class="login100-form-btn">x</button>
+							
 						</div>
 					</div>
 					<div class="wrap-input100 validate-input m-b-10" style="border-style:hidden;">
@@ -278,138 +279,6 @@
 									stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
 							</svg>
 						</div>
-
-						<!-- <li class="menu-item mega-menu mega-menu-full">
-							<a href="demo-furniture-products.html" class="menu-link">
-								<div>Shop</div>
-							</a>
-
-							 Menu DropDown
-							============================================= 
-							<div class="mega-menu-content border-bottom-0">
-								<div class="container">
-									<div class="row">
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>Sofa</div>
-												</a>
-
-												 Menu Sub DropDown
-												============================================= 
-												<ul class="sub-menu-container mega-menu-dropdown">
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Sofa Set</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Single Seater</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Recliner</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Sofa Cum Bed</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>BeanBag</div>
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>Chairs</div>
-												</a>
-											</li>
-										</ul>
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>Beds</div>
-												</a>
-											</li>
-										</ul>
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>Wardrobe</div>
-												</a>
-											</li>
-										</ul>
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>Tables</div>
-												</a>
-											</li>
-										</ul>
-										<ul class="sub-menu-container mega-menu-column col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-products.html">
-													<div>More</div>
-												</a>
-												<ul class="sub-menu-container mega-menu-dropdown">
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Kids Room</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Mattress</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Lighting</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>Pillows</div>
-														</a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link"
-															href="demo-furniture-products.html">
-															<div>FlowerPot</div>
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-										<ul
-											class="sub-menu-container mega-menu-column bg-color-light col-lg-auto">
-											<li class="menu-item">
-												<a class="menu-link" href="demo-furniture-single.html">
-													<div><i class="icon-line-link"></i>Single Page</div>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li> -->
 
 						<!-- Primary Navigation
 						============================================= -->
