@@ -28,3 +28,13 @@
     border-color:#b2beb5;
     text-align: left;
 }
+
+
+.carousel-caption {
+    margin-top: 150px;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+
+
+}
