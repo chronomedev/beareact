@@ -36,9 +36,11 @@
 }
 /* Not important for the zoom effect. */
 .card-title{
+    margin-left: 200px;
     position: absolute;
-    left: 15px;
+    left: 20px;
     bottom: 15px;
     font-size: 20px;
     text-shadow: 0 0 1px;
+    ;
 }
