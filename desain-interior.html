@@ -39,7 +39,7 @@
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css"
 		href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-		
+
 	<link rel="stylesheet" href="css/prototipe.css" />
 	<link rel="stylesheet" href="CodeSnippets-main/CardHoverZoomAnimation/styles.css">
 
@@ -262,7 +262,7 @@
 
 				</div>
 			</div>
-			<div class="header-wrap-clone"></div>
+			<div class="header-wrap-clone" style="height: 60px;"></div>
 		</header><!-- #header end -->
 
 		<style>
@@ -359,63 +359,38 @@
 					</div>
 				</div>
 		</section> -->
+		<div id="1" class="carousel-caption">
 
+
+			<div class="row">
+				<div class="col" style="">
+					<h1 id="carTtitle" style="color:white;font-size:70px;">Buat Interior Impian Anda
+						<br>
+						Menjadi Nyata!<br>
+						</h1><br>
+
+				</div>
+
+			</div>
+			<div class="row">
+
+				<div class="col">
+					<right><button class="button button-border m-0 button-dark border-width-1"
+							style="color:white;background-color: #555;">Pesan sekarang!</button></right>
+				</div>
+			</div>
+
+
+		</div>
 		<section>
 			<div class="autoplay">
-				<div class="slick-slide">
-					<div class="carousel-caption">
 
 
-						<div class="row">
-							<div class="col" style="">
-								<h1 style="color:white;font-size:70px;">Nikmati Diskon Hingga <br>
-								20% Untuk Desain<br>
-								Interior Japandi</h1><br>
-
-							</div>
-
-						</div>
-						<div class="row">
-
-							<div class="col">
-								<center><button class="button button-border m-0 button-dark border-width-1" style="color:white;background-color: #555;">Pesan sekarang!</button></center>
-							</div>
-						</div>
-
-
-					</div>
 					<img width="100%;" src="img/banner-interior-desain.png" alt="">
-					
-						</div>
-				<!-- <div class="slick-slide">
-					
-					<div class="carousel-caption">
-
-
-						<div class="row">
-							<div class="col" style="">
-								<h1 style="color:white;font-size:70px;">sdfsdds Diskon Hingga <br>
-								20% Untuk Desain<br>
-																Insdfdsfsdfndi</h1><br>
-
-							</div>
-
-						</div>
-						
-						<div class="row">
-
-							<div class="col">
-								<center><button class="button button-border m-0 button-dark border-width-1" style="color:white;background-color: #555;">Pesan sekarang!</button></center>
-							</div>
-						</div>
-
-
-					</div>
-
-
+					<img width="100%;" src="img/banner-interior-desain-3.png" alt="">
 					<img width="100%;" src="img/banner-interior-desain-2.png" alt="">
-				</div>
-				<div class="slick-slide"><img width="100%;" src="img/banner-interior-desain-3.png" alt=""></div> -->
+
+
 			</div>
 		</section>
 
@@ -537,11 +512,11 @@
 							</div>
 						</div>
 
-<!-- 
+						<!-- 
 						row kedua konten  -->
 						<div class="row col-mb-50 justify-content-center padding_top" style="padding-top:30px">
 
-	
+
 
 							<div class="clear"></div>
 							<div class="col-xl-4 col-md-6">
@@ -1328,6 +1303,33 @@
 			nextArrow: "<img class='next slick-next' src='./img/arrow-right.png'>"
 
 		});
+	</script>
+	<script>
+
+
+		$('.autoplay').on('swipe', function (event, slick, direction) {
+			console.log(direction);
+			console.log("SEKARANG SLIDE----" + $('.autoplay').slick('slickCurrentSlide'));
+			// left
+		});
+
+		$('.autoplay').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			$("#carTtitle").fadeOut(10);
+			if(nextSlide == 0){
+				$("#carTtitle").html('Buat Interior Impian Anda<br> Menjadi Nyata!');
+				
+			}
+			else if(nextSlide == 1){
+				$("#carTtitle").html('Nikmati Diskon Hingga <br>20% Untuk Desain<br>Interior Japandi');
+			} else if(nextSlide == 2){
+				$("#carTtitle").html('Wujudkan Kitchen Set <br>Impian Anda!');
+
+			}
+			$("#carTtitle").fadeIn(1000);
+			console.log(nextSlide);
+			console.log("sebelumnya----" + $('.autoplay').slick('slickCurrentSlide'));
+		});
+
 	</script>
 
 

@@ -31,9 +31,9 @@
 
 
 .carousel-caption {
-    width: 100%;
+    text-align: right;
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 200px;
     z-index: 99 !important;
     color: #fff;
 
