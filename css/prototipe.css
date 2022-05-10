@@ -61,7 +61,7 @@
 
 
     #carTtitle{
-        color:aquamarine;
+        /* color:aquamarine; */
     }
 }
 
@@ -76,7 +76,7 @@
 
     #carTtitle{
         font-size: 60px;
-        color:wheat;
+        /* color:wheat; */
     }
 }
 
@@ -114,4 +114,17 @@
     #carTtitle{
         font-size: 30px;
     }
+
+    /* #orderButton{
+        width:20px;
+        height:20px;
+    } */
+
+
+
+    .slick-slide{
+        height: 300px;
+        
+    }
+
 }
